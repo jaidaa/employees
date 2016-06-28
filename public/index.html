@@ -1,0 +1,170 @@
+<!-- <header>
+ <link rel="stylesheet" type="text/css" href="main.css">
+</header>> -->
+<h1>Mentor Graphics List of Employees</h1>
+<div class="row">
+        <div class="jumbotron banner">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-3">
+         
+                <div class="col-md-6">
+              <form class="form-inline" role="form">
+                <div class="form-group">
+
+                    <input name="EmployeeSearch"
+                           id="EmployeeSearchBox"
+                           type="text"
+                           placeholder="Search by Name"
+                           ng-model="rn"
+                           
+                           class="form-control"
+                           required>
+                  </div>
+
+              </form>
+                </div>
+                <div class="col-md-3">
+                    <button type="button" ng-click="findReservation(rn)" class="btn btn-primary">search</button>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+          </div>
+<table class="rwd-table">
+  <tr>
+    <th>Name</th>
+  
+
+    <th>ID</th>
+    <th>Salary</th>
+   <!--  <th>Gross</th> -->
+  </tr>
+  <tr>
+    <td data-th="Movie Title">Star Wars</td>
+    <td data-th="Genre">Adventure, Sci-fi</td>
+    <td data-th="Year">1977</td>
+    
+  </tr>
+  <tr>
+    <td data-th="Movie Title">Howard The Duck</td>
+    <td data-th="Genre">"Comedy"</td>
+    <td data-th="Year">1986</td>
+    
+  </tr>
+  <tr>
+    <td data-th="Movie Title">American Graffiti</td>
+    <td data-th="Genre">Comedy, Drama</td>
+    <td data-th="Year">1973</td>
+    
+  </tr>
+</table>
+
+<style>
+
+@import "compass/css3";
+
+/*// More practical CSS...
+// using mobile first method (IE8,7 requires respond.js polyfill https://github.com/scottjehl/Respond)
+
+$breakpoint-alpha: 480px; // adjust to your needs*/
+
+.rwd-table {
+  margin: 1em 0;
+  min-width: 300px; /*// adjust to your needs*/
+  
+  tr {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    display: none; 
+  }
+  
+  td {
+    display: block; 
+    
+    &:first-child {
+      padding-top: .5em;
+    }
+    &:last-child {
+      padding-bottom: .5em;
+    }
+
+    &:before {
+      content: attr(data-th)": "; 
+      font-weight: bold;
+
+     
+      width: 6.5em;
+      display: inline-block;
+      
+      
+      @media (min-width: $breakpoint-alpha) {
+        display: none;
+      }
+    }
+  }
+  
+  th, td {
+    text-align: left;
+    
+    @media (min-width: $breakpoint-alpha) {
+      display: table-cell;
+      padding: .25em .5em;
+      
+      &:first-child {
+        padding-left: 0;
+      }
+      
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+
+  }
+  
+  
+}
+
+
+
+@import 'http://fonts.googleapis.com/css?family=Montserrat:300,400,700';
+
+body {
+  padding: 0 2em;
+  font-family: Montserrat, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  color: #444;
+  background: #eee;
+}
+
+h1 {
+  font-weight: normal;
+  letter-spacing: -1px;
+  color: #34495E;
+}
+
+.rwd-table {
+  background: #34495E;
+  color: #fff;
+  border-radius: .4em;
+  overflow: hidden;
+  tr {
+    border-color: lighten(#34495E, 10%);
+  }
+  th, td {
+    margin: .5em 1em;
+    @media (min-width: $breakpoint-alpha) { 
+      padding: 1em !important; 
+    }
+  }
+  th, td:before {
+    color: #dd5;
+  }
+}
+</style>
