@@ -1,6 +1,7 @@
 <!-- <header>
  <link rel="stylesheet" type="text/css" href="main.css">
 </header>> -->
+<body>
 <h1>Mentor Graphics List of Employees</h1>
 <div class="row">
         <div class="jumbotron banner">
@@ -36,8 +37,6 @@
 <table class="rwd-table">
   <tr>
     <th>Name</th>
-  
-
     <th>ID</th>
     <th>Position</th>
     <th>Office</th>
@@ -46,25 +45,54 @@
    
   </tr>
   <tr>
-    <td data-th="Movie Title">Star Wars</td>
-    <td data-th="Genre">Adventure, Sci-fi  </td>
-    <td data-th="Year">1977</td>
+    <td data-th="Name">Star Wars</td>
+    <td data-th="ID">Adventure, Sci-fi  </td>
+    <td data-th="Position">1977</td>
+    <td data-th="Office">1977</td>
+    <td data-th="Age">1977</td>
+    <td data-th="Salary">1977</td>
     
   </tr>
   <tr>
-    <td data-th="Movie Title">Howard The Duck</td>
-    <td data-th="Genre">"Comedy"  </td>
-    <td data-th="Year">1986</td>
+    <td data-th="Name">Star Wars</td>
+    <td data-th="ID">Adventure, Sci-fi  </td>
+    <td data-th="Position">1977</td>
+    <td data-th="Office">1977</td>
+    <td data-th="Age">1977</td>
+    <td data-th="Salary">1977</td>
     
   </tr>
   <tr>
-    <td data-th="Movie Title">American Graffiti</td>
-    <td data-th="Genre">Comedy, Drama  </td>
-    <td data-th="Year">1973</td>
+   <td data-th="Name">Star Wars</td>
+    <td data-th="ID">Adventure, Sci-fi  </td>
+    <td data-th="Position">1977</td>
+    <td data-th="Office">1977</td>
+    <td data-th="Age">1977</td>
+    <td data-th="Salary">1977</td>
     
   </tr>
 </table>
+</div>>
+<script type="text/javascript">
+  $(document).ready(function () {
+            var json = require("../Employees.json");
+   
+        var tr;
+        for (var i = 0; i < json.length; i++) {
+            tr = $('<tr/>');
+            tr.append("<td>" + json[i].name + "</td>");
+            tr.append("<td>" + json[i].id + "</td>");
+            tr.append("<td>" + json[i].position + "</td>");
+            tr.append("<td>" + json[i].office + "</td>");
+            tr.append("<td>" + json[i].age + "</td>");
+            tr.append("<td>" + json[i].salary + "</td>");
+            $('table').append(tr);
+        }
+    );
+});
+</script>>
 
+</body>>
 <style>
 
 @import "compass/css3";
