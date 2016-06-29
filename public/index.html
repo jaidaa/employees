@@ -25,7 +25,7 @@
         </div>
     </div>
           </div>
-<table class="rwd-table">
+<table class="rwd-table sortable" >
   <tr>
     <th>Name</th>
     <th>ID</th>
@@ -45,7 +45,7 @@
     
   </tr>
   <tr>
-    <td data-th="Name">Star Wars</td>
+    <td data-th="Name">Abacus Wars</td>
     <td data-th="ID">Adventure, Sci-fi  </td>
     <td data-th="Position">1977</td>
     <td data-th="Office">1977</td>
@@ -64,7 +64,12 @@
   </tr>
 </table>
 </div>>
-<script type="text/javascript">
+
+
+
+<script type="text/javascript" src="sorttable.js">
+
+
   (function(document) {
   'use strict';
 
@@ -128,10 +133,6 @@
 
 @import "compass/css3";
 
-/*// More practical CSS...
-// using mobile first method (IE8,7 requires respond.js polyfill https://github.com/scottjehl/Respond)
-
-$breakpoint-alpha: 480px; // adjust to your needs*/
 
 .rwd-table {
   margin: 1em 0;
