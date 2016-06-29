@@ -69,7 +69,22 @@
 
 <script type="text/javascript" src="sorttable.js">
 
-
+$(document).ready(function () {
+            var json = require("../Employees.json");
+   
+        var tr;
+        for (var i = 0; i < json.length; i++) {
+            tr = $('<tr/>');
+            tr.append("<td>" + json[i].name + "</td>");
+            tr.append("<td>" + json[i].id + "</td>");
+            tr.append("<td>" + json[i].position + "</td>");
+            tr.append("<td>" + json[i].office + "</td>");
+            tr.append("<td>" + json[i].age + "</td>");
+            tr.append("<td>" + json[i].salary + "</td>");
+            $('table').append(tr);
+        }
+    );
+})
   (function(document) {
   'use strict';
 
@@ -110,22 +125,7 @@
 
 })(document);
 
-  $(document).ready(function () {
-            var json = require("../Employees.json");
-   
-        var tr;
-        for (var i = 0; i < json.length; i++) {
-            tr = $('<tr/>');
-            tr.append("<td>" + json[i].name + "</td>");
-            tr.append("<td>" + json[i].id + "</td>");
-            tr.append("<td>" + json[i].position + "</td>");
-            tr.append("<td>" + json[i].office + "</td>");
-            tr.append("<td>" + json[i].age + "</td>");
-            tr.append("<td>" + json[i].salary + "</td>");
-            $('table').append(tr);
-        }
-    );
-});
+  ;
 </script>>
 
 </body>>
